@@ -1,0 +1,42 @@
+/* ============================================= */
+/*                   Grid Layout                  */
+/* ============================================= */
+
+
+.header         {grid-area: head;}
+nav             {grid-area: navi;}
+.dashboard      {grid-area: dash;}
+.traffic        {grid-area: traf;}
+.daily_traffic  {grid-area: dtra;}
+.mobile_users   {grid-area: mobi;}
+.social_stats   {grid-area: socs;}
+.new_members    {grid-area: memb;}
+.recent_activity{grid-area: rece;}
+.message_user   {grid-area: mess;}
+.settings       {grid-area: sets;}
+//flexbox
+
+// .flex-row {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;   
+//     max-width: $max-width;
+//     margin: 0 auto;
+// }
+
+// .item {
+//     margin: 1.5em;
+// }
+
+// // @media (max-width: $break-s) {
+// //     .item {
+
+// //     }
+// // }
+
+// // @media (max-width: $break-m) {
+// //     .item {
+      
+// //     }
+// // }
