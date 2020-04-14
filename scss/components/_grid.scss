@@ -1,42 +1,41 @@
 /* ============================================= */
-/*                   Grid Layout                  */
+/*                   Grid Layout                 */
 /* ============================================= */
 
 
-.header         {grid-area: head;}
+header          {grid-area: head;}
 nav             {grid-area: navi;}
+main            {grid-area: main;}
 .dashboard      {grid-area: dash;}
+.alert          {grid-area: aler;}
 .traffic        {grid-area: traf;}
-.daily_traffic  {grid-area: dtra;}
-.mobile_users   {grid-area: mobi;}
-.social_stats   {grid-area: socs;}
-.new_members    {grid-area: memb;}
-.recent_activity{grid-area: rece;}
-.message_user   {grid-area: mess;}
+.dailyTraffic   {grid-area: dtra;}
+.mobileUsers    {grid-area: mobi;}
+.socialStats    {grid-area: socs;}
+.newMembers     {grid-area: memb;}
+.recentActivity {grid-area: rece;}
+.messageUser    {grid-area: mess;}
 .settings       {grid-area: sets;}
-//flexbox
 
-// .flex-row {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: center;   
-//     max-width: $max-width;
-//     margin: 0 auto;
+.bodyGrid{
+    display: grid;
+    grid-template-areas: 
+        "head"
+        "navi"
+        "main";
+    grid-template-rows: 150px 150px auto;
+}
+
+
+
+// @media (max-width: $break-s) {
+//     .main_grid {
+
+//     }
 // }
 
-// .item {
-//     margin: 1.5em;
-// }
-
-// // @media (max-width: $break-s) {
-// //     .item {
-
-// //     }
-// // }
-
-// // @media (max-width: $break-m) {
-// //     .item {
+// @media (max-width: $break-m) {
+//     .main_grid {
       
-// //     }
-// // }
+//     }
+// }
