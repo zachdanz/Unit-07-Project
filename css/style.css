@@ -341,6 +341,16 @@ template {
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  text-align: center;
+  color: #494646;
+}
+
 /* ============================================= */
 /*                   Grid Layout                 */
 /* ============================================= */
@@ -399,7 +409,24 @@ main {
 .bodyGrid {
   display: grid;
   grid-template-areas: "head" "navi" "main";
-  grid-template-rows: 150px 150px auto;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+.mainGrid {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .bodyGrid {
+    grid-template-areas: "head head" "navi main";
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px;
+  }
+  .mainGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "dash dash" "traf traf" "dtra mobi" "socs socs" "memb rece" "mess sets";
+  }
 }
 
 /* ============================================= */
@@ -1007,23 +1034,113 @@ main {
 }
 
 /*# sourceMappingURL=toggle-switch.css.map */
+main {
+  max-width: 1150px;
+}
+
 section {
+  padding: 3em;
   display: block;
   margin: 30px;
-  border: 1px black solid;
-}
-
-.navIcon, .bellDiv {
-  height: 20px;
-  width: 20px;
-  background-color: green;
-}
-
-.socialImage {
-  height: 5em;
-  width: 5em;
+  border: 1px #D1D1D1 solid;
+  margin: 0;
 }
 
 h3 {
-  color: red;
+  color: #666666;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.mockChartHalf {
+  max-width: 450px;
+}
+
+.mockChartFull {
+  max-width: 850px;
+}
+
+header {
+  background-color: #7A6FC1;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+h1 {
+  color: #fff;
+  padding-left: 30px;
+}
+
+.bellDiv {
+  height: 20px;
+  width: 20px;
+  color: #A7A4BA;
+}
+
+nav {
+  background-color: #504873;
+  padding: 20px;
+}
+
+.navIcon {
+  height: 40px;
+  width: 40px;
+  color: #A7A4BA;
+  margin-top: 20px;
+  flex-direction: row;
+  opacity: 50%;
+}
+
+.selected {
+  opacity: 100%;
+  border-left: limegreen 2px solid;
+}
+
+.trafficNav {
+  float: right;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.trafficNavLink, .trafficNavLinkActive {
+  display: inline-block;
+  margin-left: 20px;
+  color: #666666;
+  padding: 10px;
+}
+
+.trafficNavLinkActive {
+  color: #fff;
+  background-color: #5FD090;
+  border-radius: 20px;
+}
+
+.socialStats {
+  display: flex;
+}
+
+.socialContainer {
+  background-color: #FBFBFB;
+  border: #D1D1D1 1px solid;
+}
+
+.socialText h4 {
+  color: #7A6FC1;
+}
+
+.socialText p {
+  font-size: 3.5em;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+.socialImage {
+  height: 6em;
+  width: 6em;
+  background-color: #7A6FC1;
+  border-radius: 50%;
+  color: transparent;
 }

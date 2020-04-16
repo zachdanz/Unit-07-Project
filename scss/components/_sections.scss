@@ -1,20 +1,166 @@
+//====================================//
+//              Sections              //
+//====================================//
+
+main {
+    max-width: $max-width;
+}
+
 section {
+    padding: 3em;
     display: block;
     margin: 30px;
-    border: 1px black solid;
-}
-
-.navIcon, .bellDiv {
-    height: 20px;
-    width: 20px;
-    background-color: green;
-}
-
-.socialImage {
-    height: 5em;
-    width: 5em;
+    border: 1px $color-border solid;
+    margin: 0;
 }
 
 h3{
-    color: red;
+    color: $color-h3;
+    text-transform: uppercase;
+    display: inline-block;
 }
+
+.mockChartHalf{
+    max-width: 450px;
+}
+
+.mockChartFull{
+    max-width: 850px;
+}
+
+//====================================//
+//               Header               //
+//====================================//
+
+header{
+    background-color: $color-primary;
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+h1 {
+    color: $white;
+    padding-left: 30px; 
+}
+
+
+
+.bellDiv {
+    height: 20px;
+    width: 20px;
+    color: $offwhite;
+}
+
+//====================================//
+//             Navigation             //
+//====================================//
+
+nav{
+    background-color: $color-secondary;
+    padding: 20px;
+}
+
+.navIcon {
+    height: 40px;
+    width: 40px;
+    color: $offwhite;
+    margin-top: 20px;
+    flex-direction: row;
+    opacity: 50%;
+}
+
+.selected {
+    opacity: 100%;
+    border-left: limegreen 2px solid;
+}
+
+//====================================//
+//          Dashboard Tab             //
+//====================================//
+
+//====================================//
+//                Alert               //
+//====================================//
+
+//====================================//
+//               Traffic              //
+//====================================//
+
+.trafficNav{
+    float: right;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.trafficNavLink, .trafficNavLinkActive {
+    display: inline-block;
+    margin-left: 20px;
+    color: $color-h3;
+    padding: 10px;
+}
+
+.trafficNavLinkActive{
+    color: $white;
+    background-color: $color-green-accent;
+    border-radius: 20px;
+}
+
+//====================================//
+//            Daily Traffic           //
+//====================================//
+
+//====================================//
+//             Mobile Users           //
+//====================================//
+
+//====================================//
+//               Social               //
+//====================================//
+
+.socialStats {
+    display: flex;
+}
+
+.socialContainer {
+    background-color: $color-accent;
+    border: $color-border 1px solid;
+}
+
+.socialText h4{
+    color: $color-primary;
+}
+
+.socialText p{
+    font-size: 3.5em;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+.socialImage {
+    height: 6em;
+    width: 6em;
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: transparent;
+}
+
+
+
+//====================================//
+//             New Members            //
+//====================================//
+
+//====================================//
+//          Recent Activity           //
+//====================================//
+
+//====================================//
+//           Message User             //
+//====================================//
+
+//====================================//
+//               Settings             //
+//====================================//

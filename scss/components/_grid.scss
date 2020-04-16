@@ -23,19 +23,37 @@ main            {grid-area: main;}
         "head"
         "navi"
         "main";
-    grid-template-rows: 150px 150px auto;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
 }
 
+.mainGrid{
+    display: grid;
+}
 
+@media (min-width: $break-m) {
+    .bodyGrid{
+        grid-template-areas: 
+            "head head"
+            "navi main";
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 80px;
+    }
 
-// @media (max-width: $break-s) {
-//     .main_grid {
-
-//     }
-// }
+    .mainGrid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "dash dash"
+            "traf traf"
+            "dtra mobi"
+            "socs socs"
+            "memb rece"
+            "mess sets";
+    }
+}
 
 // @media (max-width: $break-m) {
-//     .main_grid {
-      
+//     .bodyGrid {
+
 //     }
 // }
