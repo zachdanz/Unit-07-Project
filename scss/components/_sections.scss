@@ -2,6 +2,10 @@
 //              Sections              //
 //====================================//
 
+* {
+    overflow: auto;
+}
+
 main {
     max-width: $max-width;
 }
@@ -42,16 +46,37 @@ h1 span {
 
 h1 {
     color: $white;
-    padding-left: 30px; 
+    padding: 20px 30px;
+    margin: 0 auto;
+    display: inline-block;
 }
-
-
 
 .bellDiv {
-    height: 20px;
-    width: 20px;
+    float: right;
     color: $offwhite;
+    padding: 20px;
 }
+
+.notificationBell{
+    opacity: 70%;
+    transition: ease-in;
+    width: 30px;
+    height: 30px;
+}
+
+.notificationBell:hover{
+    opacity: 100%;
+}
+
+.notificationAlert {
+    height: 8px;
+    width: 8px;
+    background-color: $color-green-accent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 28px;
+    margin-left: -10px;
+  }
 
 //====================================//
 //             Navigation             //
@@ -63,17 +88,22 @@ nav{
 }
 
 .navIcon {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     color: $offwhite;
     margin-top: 20px;
     flex-direction: row;
     opacity: 50%;
+    transition: ease-in .2s;
+}
+
+.navIcon:hover{
+    opacity: 100%;
 }
 
 .selected {
     opacity: 100%;
-    border-left: limegreen 2px solid;
+    border-left: $color-green-accent 2px solid;
 }
 
 //====================================//
@@ -121,27 +151,46 @@ nav{
 
 .socialStats {
     display: flex;
+    justify-content: space-around;
 }
 
 .socialContainer {
     background-color: $color-accent;
     border: $color-border 1px solid;
+    margin-left: 20px;
+    border-radius: 3px;
+    width: 33%;
+}
+
+.socialText{
+    float: right;
 }
 
 .socialText h4{
     color: $color-primary;
+    display: inline-block;
+    padding-left: 20px;
+    float: left;
 }
 
 .socialText p{
-    font-size: 3.5em;
+    font-size: 2em;
     color: #000;
     padding: 0;
     margin: 0;
+    display: inline-block;
+    float: left;
+}
+
+.socialIcon{
+    width: 56px;
+    height: 56px;
 }
 
 .socialImage {
     height: 6em;
     width: 6em;
+    float: left;
     background-color: $color-primary;
     border-radius: 50%;
     color: transparent;
@@ -152,6 +201,11 @@ nav{
 //====================================//
 //             New Members            //
 //====================================//
+
+.profileImage{
+    border-radius: 50%;
+    width: 30px;
+}
 
 //====================================//
 //          Recent Activity           //
