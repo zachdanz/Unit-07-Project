@@ -11,7 +11,7 @@ main {
 }
 
 section {
-    padding: 3em;
+    padding: 30px;
     display: block;
     margin: 30px;
     border: 1px $color-border solid;
@@ -19,6 +19,7 @@ section {
 }
 
 h3{
+    margin-top: 0;
     color: $color-h3;
     text-transform: uppercase;
     display: inline-block;
@@ -51,7 +52,7 @@ h1 {
     display: inline-block;
 }
 
-.bellDiv {
+.userDiv {
     float: right;
     color: $offwhite;
     padding: 20px;
@@ -62,6 +63,7 @@ h1 {
     transition: ease-in;
     width: 30px;
     height: 30px;
+    float: left;
 }
 
 .notificationBell:hover{
@@ -77,6 +79,26 @@ h1 {
     margin-bottom: 28px;
     margin-left: -10px;
   }
+
+.bellDiv {
+    float: left;
+    padding-right: 25px;
+    border-right: 1px $color-secondary solid;
+}
+
+.userProfPic{
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 25px;
+}
+
+.userName p {
+    color: $white;
+    display: block;
+    float: right;
+    padding-left: 10px;
+}
 
 //====================================//
 //             Navigation             //
@@ -160,6 +182,7 @@ nav{
     margin-left: 20px;
     border-radius: 3px;
     width: 33%;
+    padding: 1.5em;
 }
 
 .socialText{
@@ -202,14 +225,59 @@ nav{
 //             New Members            //
 //====================================//
 
+.NewMembersContainer{
+    margin: 15px 0;
+    padding: 10px 0;
+    display: block;
+}
+
+.NewMembersContainer:not(:last-child) {
+    border-bottom: $color-border 1px solid;
+}
+
 .profileImage{
     border-radius: 50%;
-    width: 30px;
+    width: 50px;
+}
+
+.newMembersText{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.newMembersText p {
+    margin: 0;
+    text-align: left;
+}
+
+.joinDate {
+    display: block;
+    float: right;
 }
 
 //====================================//
 //          Recent Activity           //
 //====================================//
+
+.recentActivityContainer{
+    margin: 15px 0;
+    padding: 10px 0;
+    display: block;
+}
+
+.recentActivityContainer:not(:last-child) {
+    border-bottom: $color-border 1px solid;
+}
+
+.recentActivityText{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.recentActivityText p {
+    margin: 0;
+    text-align: left;
+}
 
 //====================================//
 //           Message User             //
