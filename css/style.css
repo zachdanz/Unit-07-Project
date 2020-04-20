@@ -413,10 +413,6 @@ main {
   grid-template-columns: 100%;
 }
 
-.mainGrid {
-  display: grid;
-}
-
 @media (min-width: 768px) {
   .bodyGrid {
     grid-template-areas: "head head" "navi main";
@@ -424,8 +420,9 @@ main {
     grid-template-rows: 80px;
   }
   .mainGrid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dash dash" "traf traf" "dtra mobi" "socs socs" "memb rece" "mess sets";
+    grid-template-areas: "dash dash" "aler aler" "traf traf" "dtra mobi" "socs socs" "memb rece" "mess sets";
   }
 }
 
@@ -1038,10 +1035,6 @@ main {
   overflow: auto;
 }
 
-main {
-  max-width: 1150px;
-}
-
 section {
   padding: 30px;
   display: block;
@@ -1057,16 +1050,13 @@ h3 {
   display: inline-block;
 }
 
-.mockChartHalf {
-  max-width: 450px;
-}
-
-.mockChartFull {
-  max-width: 850px;
+.mockChartHalf, .mockChartFull {
+  max-width: 100%;
 }
 
 header {
   background-color: #7A6FC1;
+  height: 80px;
 }
 
 h1 span {
@@ -1130,14 +1120,13 @@ h1 {
 
 nav {
   background-color: #504873;
-  padding: 20px;
 }
 
 .navIcon {
   height: 35px;
   width: 35px;
   color: #A7A4BA;
-  margin-top: 20px;
+  margin: 20px 0 20px 20px;
   flex-direction: row;
   opacity: 50%;
   transition: ease-in .2s;
@@ -1150,6 +1139,39 @@ nav {
 .selected {
   opacity: 100%;
   border-left: #5FD090 2px solid;
+}
+
+@media (min-width: 768px) {
+  .navicon {
+    padding: 20px;
+  }
+}
+
+.alert {
+  margin: 10px;
+  background-color: #7A6FC1;
+  border-radius: 3px;
+}
+
+.alert p, .alertBannerClose {
+  color: #fff;
+  margin: 10px 0;
+}
+
+.alert p {
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.alertBannerClose {
+  display: block;
+  float: right;
+  padding-right: 20px;
+}
+
+.alertBannerClose:hover {
+  cursor: pointer;
 }
 
 .trafficNav {
@@ -1169,6 +1191,19 @@ nav {
   color: #fff;
   background-color: #5FD090;
   border-radius: 20px;
+}
+
+.widget-container-full, .widget-container-half {
+  width: 95vw;
+}
+
+@media (min-width: 768px) {
+  .widget-container-full {
+    width: 90vw;
+  }
+  .widget-container-half {
+    width: 45vw;
+  }
 }
 
 .socialStats {
@@ -1191,7 +1226,7 @@ nav {
 
 .socialText h4 {
   color: #7A6FC1;
-  display: inline-block;
+  display: block;
   padding-left: 20px;
   float: left;
 }
@@ -1201,7 +1236,7 @@ nav {
   color: #000;
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: block;
   float: left;
 }
 

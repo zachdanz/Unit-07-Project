@@ -6,9 +6,9 @@
     overflow: auto;
 }
 
-main {
-    max-width: $max-width;
-}
+// main {
+//     max-width: $max-width;
+// }
 
 section {
     padding: 30px;
@@ -25,12 +25,8 @@ h3{
     display: inline-block;
 }
 
-.mockChartHalf{
-    max-width: 450px;
-}
-
-.mockChartFull{
-    max-width: 850px;
+.mockChartHalf, .mockChartFull{
+    max-width: 100%;
 }
 
 //====================================//
@@ -39,6 +35,7 @@ h3{
 
 header{
     background-color: $color-primary;
+    height: 80px;
 }
 
 h1 span {
@@ -100,20 +97,20 @@ h1 {
     padding-left: 10px;
 }
 
+
 //====================================//
 //             Navigation             //
 //====================================//
 
 nav{
     background-color: $color-secondary;
-    padding: 20px;
 }
 
 .navIcon {
     height: 35px;
     width: 35px;
     color: $offwhite;
-    margin-top: 20px;
+    margin: 20px 0 20px 20px;
     flex-direction: row;
     opacity: 50%;
     transition: ease-in .2s;
@@ -128,6 +125,16 @@ nav{
     border-left: $color-green-accent 2px solid;
 }
 
+@media (min-width: $break-m) {
+    // nav{
+    //     padding: 20px;
+    // }
+
+    .navicon{
+        padding: 20px;
+    }
+}
+
 //====================================//
 //          Dashboard Tab             //
 //====================================//
@@ -135,6 +142,33 @@ nav{
 //====================================//
 //                Alert               //
 //====================================//
+
+.alert{
+    margin: 10px;
+    background-color: $color-primary;
+    border-radius: 3px;
+}
+
+.alert p, .alertBannerClose {
+    color: $white;
+    margin: 10px 0;
+}
+
+.alert p{
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.alertBannerClose{
+    display: block;
+    float: right;
+    padding-right: 20px;
+}
+
+.alertBannerClose:hover{
+    cursor: pointer;
+}
 
 //====================================//
 //               Traffic              //
@@ -157,6 +191,20 @@ nav{
     color: $white;
     background-color: $color-green-accent;
     border-radius: 20px;
+}
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+}
+
+@media (min-width: 768px) {
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
 }
 
 //====================================//
@@ -191,7 +239,7 @@ nav{
 
 .socialText h4{
     color: $color-primary;
-    display: inline-block;
+    display: block;
     padding-left: 20px;
     float: left;
 }
@@ -201,7 +249,7 @@ nav{
     color: #000;
     padding: 0;
     margin: 0;
-    display: inline-block;
+    display: block;
     float: left;
 }
 

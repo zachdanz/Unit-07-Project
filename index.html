@@ -5,6 +5,7 @@
     <title>WebApp Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/Chart.min.css" rel="stylesheet">
   </head>
   <body class="bodyGrid">
     <header>
@@ -63,7 +64,7 @@
                 </ul>
             </div>
             <div class="widgetContainerFull">
-                <img class="mockChartFull" src="images/MockCharts/TrafficExample.jpg">
+                <!-- <img class="mockChartFull" src="images/MockCharts/TrafficExample.jpg"> -->
                 <canvas id="trafficChart"></canvas>
             </div>
         </section>
@@ -71,16 +72,16 @@
         <section class="dailyTraffic">
             <h3>Daily Traffic</h3>
             <div class="widgetContainerHalf">
-                <img class="mockChartHalf" src="images/MockCharts/DailyTrafficExample.png">
-                <canvas id="dailyTraffic"></canvas>
+                <!-- <img class="mockChartHalf" src="images/MockCharts/DailyTrafficExample.png"> -->
+                <canvas id="dailyTrafficChart"></canvas>
             </div>
         </section>
 
         <section class="mobileUsers">
             <h3>Mobile Users</h3>
             <div class="widgetContainerHalf">
-                <img class="mockChartHalf" src="images/MockCharts/DonutExample.png">
-                <canvas id="mobileUsers"></canvas>
+                <!-- <img class="mockChartHalf" src="images/MockCharts/DonutExample.png"> -->
+                <canvas id="mobileUsersChart"></canvas>
             </div>
         </section>
 
@@ -286,6 +287,8 @@
         </section>
     </main>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
   </body>
 </html>
