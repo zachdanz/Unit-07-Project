@@ -62,7 +62,7 @@ let trafficOptions = {
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficDataWeekly,
+    data: trafficDataDaily,
     options: trafficOptions
     });
 

@@ -1303,3 +1303,42 @@ nav {
   margin: 0;
   text-align: left;
 }
+
+.formField,
+.formArea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 14px;
+  background: #eeeeee;
+  border: #D1D1D1 2px solid;
+  border-radius: 4px;
+}
+
+.formField::placeholder,
+.formArea::placeholder {
+  font-size: .95em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.formField:focus,
+.formArea:focus {
+  border: 2px #504873 solid;
+  transition-duration: .3s;
+}
+
+.formArea {
+  height: 200px;
+}
+
+.buttonPrimary {
+  width: 100%;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #7A6FC1;
+  padding: 12px 0;
+  margin: 0 auto;
+  display: block;
+}
