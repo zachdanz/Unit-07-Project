@@ -45,9 +45,9 @@
     <main class="mainGrid">
 
         <div class="dashboard">
-            <h2​ class="headline"> ​Dashboard </h2>​
+            <h2​ class="headline">Dashboard</h2>​
             <div class="mainHeaderSearch"​>​
-                <input​ type="search" placeholder="Search..."​ />​
+                <input​ type="text" id="search" placeholder="Search..."​ />​
             </div>
         </div> 
 
@@ -214,9 +214,9 @@
             <h3>Settings</h3>
             <label class="switch-light switch-material" onclick="">
                 <input type="checkbox">
-                <strong>
-                  Send Email Notifications
-                </strong>
+                    <strong>
+                    Send Email Notifications
+                    </strong>
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -236,7 +236,8 @@
                 </span>
             </label>
 
-            <select name="timezone_offset" id="timezone-offset" class="span5">
+            <select name="timezone_offset" id="timezone-offset" placeholder="Select Timezone" class="span5">
+                <option selected disabled>Select a Timezone</option>
                 <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                 <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                 <option value="-10:00">(GMT -10:00) Hawaii</option>
@@ -252,7 +253,7 @@
                 <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
                 <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
                 <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
-                <option value="+00:00" selected="selected">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
                 <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
                 <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
                 <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>

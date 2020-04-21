@@ -1147,6 +1147,18 @@ nav {
   }
 }
 
+.dashboard {
+  background-color: #FBFBFB;
+  display: flex;
+  flex-direction: row;
+}
+
+.headline {
+  background-color: #fff;
+  padding: 22px;
+  border-right: #D1D1D1 1px solid;
+}
+
 .alert {
   margin: 10px;
   background-color: #7A6FC1;
@@ -1255,7 +1267,6 @@ nav {
 }
 
 .NewMembersContainer {
-  margin: 15px 0;
   padding: 10px 0;
   display: block;
 }
@@ -1285,7 +1296,6 @@ nav {
 }
 
 .recentActivityContainer {
-  margin: 15px 0;
   padding: 10px 0;
   display: block;
 }
@@ -1316,7 +1326,7 @@ nav {
 
 .formField::placeholder,
 .formArea::placeholder {
-  font-size: .95em;
+  font-size: 1.15em;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1327,7 +1337,7 @@ nav {
 }
 
 .formArea {
-  height: 200px;
+  height: 150px;
 }
 
 .buttonPrimary {
@@ -1341,4 +1351,37 @@ nav {
   padding: 12px 0;
   margin: 0 auto;
   display: block;
+}
+
+.switch-light {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.settings-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-disabled,
+.button-primary {
+  width: 45%;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #7A6FC1;
+  padding: 12px 0;
+  margin: 0;
+  display: block;
+  text-align: center;
 }
