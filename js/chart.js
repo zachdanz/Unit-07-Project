@@ -44,7 +44,7 @@ let trafficDataMonthly = {
     };
 
 let trafficOptions = {
-    aspectRatio: 2.5,
+    aspectRatio: 4,
     animation: {
         duration: 0
     },

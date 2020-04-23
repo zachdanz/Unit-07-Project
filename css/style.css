@@ -1078,7 +1078,7 @@ h1 {
 
 .notificationBell {
   opacity: 70%;
-  transition: ease-in;
+  transition: ease-in .2s;
   width: 30px;
   height: 30px;
   float: left;
@@ -1094,8 +1094,8 @@ h1 {
   background-color: #5FD090;
   border-radius: 50%;
   display: inline-block;
-  margin-bottom: 28px;
-  margin-left: -10px;
+  margin-bottom: 30px;
+  margin-left: -6px;
 }
 
 .bellDiv {
@@ -1151,12 +1151,28 @@ nav {
   background-color: #FBFBFB;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .headline {
   background-color: #fff;
   padding: 22px;
   border-right: #D1D1D1 1px solid;
+  margin: 0;
+}
+
+.mainHeaderSearch {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.mainHeaderSearch input {
+  width: 100%;
+  padding: 2px;
+  margin: 18px;
+  border: #D1D1D1 2px solid;
+  border-radius: 4px;
 }
 
 .alert {
@@ -1233,7 +1249,8 @@ nav {
 }
 
 .socialText {
-  float: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .socialText h4 {
@@ -1241,12 +1258,15 @@ nav {
   display: block;
   padding-left: 20px;
   float: left;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 .socialText p {
-  font-size: 2em;
+  font-size: 3.5em;
+  text-align: left;
   color: #000;
-  padding: 0;
+  padding-left: 20px;
   margin: 0;
   display: block;
   float: left;
@@ -1293,6 +1313,11 @@ nav {
 .joinDate {
   display: block;
   float: right;
+}
+
+.newMembersText a {
+  text-decoration: none;
+  color: #7A6FC1;
 }
 
 .recentActivityContainer {
@@ -1369,6 +1394,10 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.checkDiv {
+  position: relative;
 }
 
 .button-disabled,
