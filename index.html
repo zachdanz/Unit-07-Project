@@ -201,11 +201,13 @@
 
         <section class="messageUser">
             <h3>Message User</h3>
-            <form class="widgetContainer">
-                <input type="text" placeholder="Search for User" class="formField" id="userField">
-                <br>
+            <form class="widgetContainer" autocomplete="off" action="/action_page.php">
+                <div class="autocomplete">
+                    <input type="text" placeholder="Search for User" class="formField" id="userField">
+                </div>
+                    <br>
                 <textarea placeholder="Message for User" class="formArea" id="messageField"></textarea>
-                <br>
+                    <br>
                 <button class="buttonPrimary" id="send">Send</button>
             </form>
         </section>
