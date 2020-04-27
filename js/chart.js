@@ -62,11 +62,15 @@ let trafficOptions = {
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficDataDaily,
+    data: trafficDataHourly,
     options: trafficOptions
     });
 
 // 
+
+// Change traffic viewport
+
+
 
 
 // Daily Traffic Chart

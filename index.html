@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/Chart.min.css" rel="stylesheet">
+    <link href="css/awesomplete.css" rel="stylesheet">
   </head>
   <body class="bodyGrid">
     <header>
@@ -24,7 +25,7 @@
                     </g>
                 </g>
                 </svg>
-                <span class= "notificationAlert"></span>
+                <span class= "notificationNumber"></span>
                 <div id="notifications"></div>
             </div>
             <div class="userName">
@@ -202,9 +203,16 @@
         <section class="messageUser">
             <h3>Message User</h3>
             <form class="widgetContainer" autocomplete="off" action="/action_page.php">
-                <div class="autocomplete">
-                    <input type="text" placeholder="Search for User" class="formField" id="userField">
-                </div>
+                <input type="text" placeholder="Search for User" class="formField" id="userField">
+                <datalist id="userField">
+                    <option>Ada</option>
+                    <option>Java</option>
+                    <option>JavaScript</option>
+                    <option>Brainfuck</option>
+                    <option>LOLCODE</option>
+                    <option>Node.js</option>
+                    <option>Ruby on Rails</option>
+                </datalist>
                     <br>
                 <textarea placeholder="Message for User" class="formArea" id="messageField"></textarea>
                     <br>
@@ -284,10 +292,12 @@
             </div​>
               
         </section>
+
     </main>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/awesomplete.min.js"></script>
   </body>
 </html>
