@@ -9,6 +9,9 @@
     <link href="css/awesomplete.css" rel="stylesheet">
   </head>
   <body class="bodyGrid">
+
+<!-- Header/ Notifcations -->
+
     <header>
         <h1><span>Your</span>App</h1>
         <div class="userDiv">
@@ -54,6 +57,8 @@
 
         <div class="alert" id="alert"></div>
 
+<!-- Traffic -->
+
         <section class="traffic">
             <div class="trafficHeader">
                 <h3>Traffic</h3>
@@ -70,6 +75,9 @@
             </div>
         </section>
 
+<!-- Daily Traffic -->
+
+
         <section class="dailyTraffic">
             <h3>Daily Traffic</h3>
             <div class="widgetContainerHalf">
@@ -78,6 +86,8 @@
             </div>
         </section>
 
+<!-- Mobile Users -->
+
         <section class="mobileUsers">
             <h3>Mobile Users</h3>
             <div class="widgetContainerHalf">
@@ -85,6 +95,8 @@
                 <canvas id="mobileUsersChart"></canvas>
             </div>
         </section>
+
+<!-- Social Stats -->
 
         <section class="socialStats">
             <div class="socialContainer">
@@ -123,6 +135,8 @@
                 </div>
             </div>
         </section>
+
+<!-- New Members -->
 
         <section class="newMembers">
             <h3>New Members</h3>
@@ -164,6 +178,8 @@
             </div>
         </section>
         
+<!-- Recent Activity -->
+
         <section class="recentActivity">
             <h3>Recent Activity</h3>
 
@@ -200,18 +216,33 @@
             </div>
         </section>
 
+<!-- Message User -->
         <section class="messageUser">
             <h3>Message User</h3>
             <form class="widgetContainer" autocomplete="off" action="/action_page.php">
-                <input type="text" placeholder="Search for User" class="formField" id="userField">
-                <datalist id="userField">
-                    <option>Ada</option>
-                    <option>Java</option>
-                    <option>JavaScript</option>
-                    <option>Brainfuck</option>
-                    <option>LOLCODE</option>
-                    <option>Node.js</option>
-                    <option>Ruby on Rails</option>
+                <input type="text" placeholder="Search for User" class="formField" id="userField" list="myList">
+                <datalist id="myList">
+                    <option>Victoria Chambers</option>
+                    <option>Dale Byrd</option>
+                    <option>Dawn Wood</option>
+                    <option>Dan Oliver</option>
+                    <option>Zach Danz</option>
+                    <option>Stephen Langton</option>
+                    <option>Alec Danz</option>
+                    <option>Jake Mizell</option>
+                    <option>Victor Alexander Holguin</option>
+                    <option>Mark Gold</option>
+                    <option>Kerina McCarthy</option>
+                    <option>Garrett Evan Anderson</option>
+                    <option>Cameron Chafin</option>
+                    <option>Clyde Compton</option>
+                    <option>Nurtaç Türkeli</option>
+                    <option>Megan Robinson</option>
+                    <option>Tiffany Hopper</option>
+                    <option>Norm Hitzges</option>
+                    <option>Gwendolyn Marie</option>
+                    <option>Barack Obama</option>
+                    <option>Marilyn Monroe</option>
                 </datalist>
                     <br>
                 <textarea placeholder="Message for User" class="formArea" id="messageField"></textarea>
@@ -219,7 +250,8 @@
                 <button class="buttonPrimary" id="send">Send</button>
             </form>
         </section>
-
+        
+<!-- Settings -->
         <section class="settings">
             <h3>Settings</h3>
             <label class="switch-light switch-material" onclick="">
