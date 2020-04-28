@@ -112,18 +112,24 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // Change traffic viewport
 
+function updateCharts(index) {
+    trafficChart.data.labels = trafficData[index].labels
+    trafficChart.data.datasets.data = trafficData[index].datasets.data
+    trafficChart.update();
+};
+
 const trafficNav = document.querySelector('.trafficNav');
 const navItem = trafficNav.querySelectorAll('.trafficNavLink');
 trafficNav.addEventListener('click', (e) => {
 	navItem.forEach((item, index) => {
 		item.classList.remove('activeNavLink');
-	});
-	for (let i = 0; i < navItem.length; i++) {
-		if (e.target === navItem[i]) {
-			e.target.classList.add('activeNavLink');
+		if ( e.target === item ) {
+            e.target.classList.add('activeNavLink');
+            updateCharts(index);
 		}
-	}
+	});
 });
+
 
 
 // Daily Traffic Chart

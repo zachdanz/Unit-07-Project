@@ -1122,7 +1122,20 @@ h1 {
 .notificationDropdown {
   position: absolute;
   z-index: 100;
-  display: hidden;
+  right: 250px;
+  padding: 10px;
+  background-color: #fff;
+  border: #D1D1D1 1px solid;
+  display: none;
+}
+
+.singleNotification {
+  display: flex;
+}
+
+.notText {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -1220,12 +1233,14 @@ nav {
   margin-left: 20px;
   color: #666666;
   padding: 10px;
+  cursor: pointer;
+  transition: ease-in .2s;
+  border-radius: 20px;
 }
 
 .activeNavLink {
   color: #fff;
   background-color: #5FD090;
-  border-radius: 20px;
 }
 
 .widget-container-full, .widget-container-half {
@@ -1383,6 +1398,7 @@ nav {
   padding: 12px 0;
   margin: 0 auto;
   display: block;
+  cursor: pointer;
 }
 
 .autocomplete {
@@ -1445,6 +1461,7 @@ nav {
 
 .button-disabled,
 .button-primary {
+  cursor: pointer;
   width: 45%;
   font-size: 1.25em;
   text-transform: uppercase;
