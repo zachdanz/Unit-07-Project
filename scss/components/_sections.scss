@@ -81,6 +81,7 @@ h1 {
     float: left;
     padding-right: 25px;
     border-right: 1px $color-secondary solid;
+    position: relative;
 }
 
 .userProfPic{
@@ -95,6 +96,12 @@ h1 {
     display: block;
     float: right;
     padding-left: 10px;
+}
+
+.notificationDropdown{
+    position: absolute;
+    z-index: 100;
+    display: hidden;
 }
 
 

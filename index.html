@@ -11,7 +11,6 @@
   <body class="bodyGrid">
 
 <!-- Header/ Notifcations -->
-
     <header>
         <h1><span>Your</span>App</h1>
         <div class="userDiv">
@@ -28,8 +27,25 @@
                     </g>
                 </g>
                 </svg>
-                <span class= "notificationNumber"></span>
-                <div id="notifications"></div>
+                <div class="notificationDropdown">
+                    <div class="singleNotification">
+                        <img src="images/member-1.jpg" alt="user" class="profileImage">
+                        <p><strong>Victoria Chambers</strong> liked your comment.</p>
+                        <p>3 hours ago</p>
+                    </div>  
+
+                    <div class="singleNotification">
+                        <img src="images/member-4.jpg" alt="user" class="profileImage">
+                        <p><strong>Dan Oliver</strong> shared a video on your profile.</p>
+                        <p>3 hours ago</p>
+                    </div>  
+
+                    <div class="singleNotification">
+                        <img src="images/member-3.jpg" alt="user" class="profileImage">
+                        <p><strong>Dawn Wood</strong> sent you a request to connect.</p>
+                        <p>3 hours ago</p>
+                    </div>  
+                </div>
             </div>
             <div class="userName">
                 <img src="images/user.jpg" alt="user" class="userProfPic">
@@ -40,6 +56,8 @@
         <img>
         <h3></h3>
     </header>
+
+<!-- Nav -->
     <nav>
         <a href="#"><img src="icons/icon-dashboard.svg" alt="dashboard" class="navIcon selected"></a>
         <a href="#"><img src="icons/icon-members.svg" alt="members" class="navIcon"></a>
@@ -48,6 +66,7 @@
     </nav>
     <main class="mainGrid">
 
+<!-- Dashboard -->
         <div class="dashboard">
             <h2 class="headline">Dashboard</h2>
             <div class="mainHeaderSearch">​
@@ -76,7 +95,6 @@
         </section>
 
 <!-- Daily Traffic -->
-
 
         <section class="dailyTraffic">
             <h3>Daily Traffic</h3>
@@ -217,6 +235,7 @@
         </section>
 
 <!-- Message User -->
+
         <section class="messageUser">
             <h3>Message User</h3>
             <form class="widgetContainer" autocomplete="off" action="/action_page.php">
@@ -252,6 +271,7 @@
         </section>
         
 <!-- Settings -->
+
         <section class="settings">
             <h3>Settings</h3>
             <label class="switch-light switch-material" onclick="">
@@ -322,7 +342,6 @@
                 <button​ class="button-primary"​ id="save"​>​Save</button​>​
                 <button​ class="button-disabled"​ id="cancel"​>​Cancel</button​>​
             </div​>
-              
         </section>
 
     </main>
