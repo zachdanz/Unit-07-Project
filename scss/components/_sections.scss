@@ -98,7 +98,7 @@ h1 {
     padding-left: 10px;
 }
 
-.notificationDropdown{
+.notificationDropdown {
     position: absolute;
     z-index: 100;
     display: hidden;
@@ -215,14 +215,14 @@ nav{
     margin-top: 0;
 }
 
-.trafficNavLink, .trafficNavLinkActive {
+.trafficNavLink, .activeNavLink{
     display: inline-block;
     margin-left: 20px;
     color: $color-h3;
     padding: 10px;
 }
 
-.trafficNavLinkActive{
+.activeNavLink{
     color: $white;
     background-color: $color-green-accent;
     border-radius: 20px;

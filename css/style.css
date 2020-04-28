@@ -1102,6 +1102,7 @@ h1 {
   float: left;
   padding-right: 25px;
   border-right: 1px #504873 solid;
+  position: relative;
 }
 
 .userProfPic {
@@ -1116,6 +1117,12 @@ h1 {
   display: block;
   float: right;
   padding-left: 10px;
+}
+
+.notificationDropdown {
+  position: absolute;
+  z-index: 100;
+  display: hidden;
 }
 
 nav {
@@ -1208,14 +1215,14 @@ nav {
   margin-top: 0;
 }
 
-.trafficNavLink, .trafficNavLinkActive {
+.trafficNavLink, .activeNavLink {
   display: inline-block;
   margin-left: 20px;
   color: #666666;
   padding: 10px;
 }
 
-.trafficNavLinkActive {
+.activeNavLink {
   color: #fff;
   background-color: #5FD090;
   border-radius: 20px;
