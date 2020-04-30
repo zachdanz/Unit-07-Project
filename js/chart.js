@@ -15,7 +15,7 @@ const trafficData = [
 		labels: ["Apr 16", "Apr 17", "Apr 18", "Apr 19", "Apr 20", "Apr 21", "Apr 22",
 			"Apr 23", "Apr 24", "Apr 25", "Apr 26", "Apr 27", "Apr 28", "Apr 29"],
 		datasets: [{
-			data: [1075, 2199, 1284, 2192, 2067, 1723, 1556, 1317, 2202, 2171, 1197, 1537, 938, 2100],
+			data: [1575, 2199, 1284, 2192, 3467, 3723, 2256, 1717, 1602, 1871, 1397, 1737, 1938, 2200],
 			backgroundColor: 'rgba(116, 119, 191, .3)',
 			borderWidth: 1,
 		}]
@@ -24,8 +24,8 @@ const trafficData = [
 		labels: ["Apr 16-22", "Apr 23-29", "Apr 30- May 5", "May 6-12", "May 13-19", "May 20-26", "May 27- Jun 2",
 			"Jun 3-9", "Jun 10-16", "Jun 17-23", "Jun 24-30"],
 		datasets: [{
-			data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
-				2500],
+			data: [7500, 12500, 10000, 20000, 15000, 17500, 12500, 18500, 22500, 15000,
+				26000],
 			backgroundColor: 'rgba(116, 119, 191, .3)',
 			borderWidth: 1,
 		}]
@@ -34,7 +34,7 @@ const trafficData = [
 		labels: ["April", "May", "June", "July", "August", "September", "October",
 			"November", "December", "January", "February", "March"],
 		datasets: [{
-			data: [11699, 13496, 16751, 19152, 17561, 23852, 25912, 29165, 34158, 29451, 36105, 40960, 41060, 43129, 44408, 45263],
+			data: [116990, 134960, 167510, 191520, 175610, 238520, 259120, 291650, 341580, 294510, 361050, 409600, 410600, 431290, 444080, 452630],
 			backgroundColor: 'rgba(116, 119, 191, .3)',
 			borderWidth: 1,
 		}]
@@ -114,7 +114,7 @@ let trafficChart = new Chart(trafficCanvas, {
 
 function updateCharts(index) {
     trafficChart.data.labels = trafficData[index].labels
-    trafficChart.data.datasets.data = trafficData[index].datasets.data
+    trafficChart.data.datasets = trafficData[index].datasets
     trafficChart.update();
 };
 

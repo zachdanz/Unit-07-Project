@@ -1125,17 +1125,41 @@ h1 {
   right: 250px;
   padding: 10px;
   background-color: #fff;
-  border: #D1D1D1 1px solid;
+  border: #504873 2px solid;
+  border-radius: 2px;
   display: none;
+  background-color: #FBFBFB;
+}
+
+.notificationDropdown p {
+  margin: 0 0 10px 0;
 }
 
 .singleNotification {
   display: flex;
+  padding: .75em;
+  border-top: #D1D1D1 1px dotted;
+}
+
+.singleNotification:not(:first) {
+  border-top: #D1D1D1 1px dotted;
 }
 
 .notText {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+}
+
+.notText p {
+  margin: 0;
+  text-align: left;
+}
+
+.notText p:nth-child(2) {
+  margin: 0;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -1172,12 +1196,14 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: #D1D1D1 1px solid;
 }
 
 .headline {
   background-color: #fff;
   padding: 22px;
   border-right: #D1D1D1 1px solid;
+  border-bottom: none;
   margin: 0;
 }
 
@@ -1256,17 +1282,22 @@ nav {
   }
 }
 
+.traffic {
+  border-top: none;
+}
+
 .socialStats {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 
 .socialContainer {
   background-color: #FBFBFB;
   border: #D1D1D1 1px solid;
   margin-left: 20px;
+  margin-bottom: 20px;
   border-radius: 3px;
-  width: 33%;
   padding: 1.5em;
 }
 
@@ -1285,7 +1316,7 @@ nav {
 }
 
 .socialText p {
-  font-size: 3.5em;
+  font-size: 2.5em;
   text-align: left;
   color: #000;
   padding-left: 20px;
@@ -1295,17 +1326,37 @@ nav {
 }
 
 .socialIcon {
-  width: 56px;
-  height: 56px;
+  float: left;
 }
 
 .socialImage {
-  height: 6em;
-  width: 6em;
+  height: 100%;
+  width: 25%;
   float: left;
   background-color: #7A6FC1;
   border-radius: 50%;
   color: transparent;
+}
+
+.socialLogo {
+  width: 3em;
+  position: relative;
+  left: 1.5em;
+  top: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .socialContainer {
+    width: 33%;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+  .socialStats {
+    flex-direction: row;
+  }
+  .socialText p {
+    font-size: 3.5em;
+  }
 }
 
 .NewMembersContainer {
@@ -1359,6 +1410,10 @@ nav {
 .recentActivityText p {
   margin: 0;
   text-align: left;
+}
+
+.recentActivityText p:nth-child(2) {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .formField,

@@ -104,19 +104,45 @@ h1 {
     right: 250px;
     padding: 10px;
     background-color: $white;
-    border: $color-border 1px solid;
+    border: $color-secondary 2px solid;
+    border-radius: 2px;
     display: none;
+    background-color: $color-accent;
+}
+
+.notificationDropdown p{
+    margin: 0 0 10px 0;
 }
 
 .singleNotification {
     display: flex;
+    padding: .75em;
+    border-top: $color-border 1px dotted;    
+
 }
+
+.singleNotification:not(:first) {
+    border-top: $color-border 1px dotted;    
+}
+
 
 .notText{
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
+.notText p {
+    margin: 0;
+    text-align: left;
+}
+
+.notText p:nth-child(2) {
+    margin: 0;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+
+}
 
 //====================================//
 //             Navigation             //
@@ -164,12 +190,14 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: $color-border 1px solid;
 }
 
 .headline{
     background-color: $white;
     padding: 22px;
     border-right: $color-border 1px solid;
+    border-bottom: none;
     margin: 0;
 }
 
@@ -257,6 +285,10 @@ nav{
     }
 }
 
+.traffic{
+    border-top: none;
+}
+
 //====================================//
 //            Daily Traffic           //
 //====================================//
@@ -272,14 +304,15 @@ nav{
 .socialStats {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .socialContainer {
     background-color: $color-accent;
     border: $color-border 1px solid;
     margin-left: 20px;
+    margin-bottom: 20px;
     border-radius: 3px;
-    width: 33%;
     padding: 1.5em;
 }
 
@@ -298,7 +331,7 @@ nav{
 }
 
 .socialText p{
-    font-size: 3.5em;
+    font-size: 2.5em;
     text-align: left;
     color: #000;
     padding-left: 20px;
@@ -308,19 +341,40 @@ nav{
 }
 
 .socialIcon{
-    width: 56px;
-    height: 56px;
+    float: left;
 }
 
 .socialImage {
-    height: 6em;
-    width: 6em;
+    height: 100%;
+    width: 25%;
     float: left;
     background-color: $color-primary;
     border-radius: 50%;
     color: transparent;
 }
 
+.socialLogo {
+    width: 3em;
+    position: relative;
+    left: 1.5em;
+    top: 1.5em;
+}
+
+@media (min-width: 768px) {
+    .socialContainer {
+        width: 33%;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .socialStats {
+        flex-direction: row;
+    }
+
+    .socialText p{
+        font-size: 3.5em;
+    }
+}
 
 
 //====================================//
@@ -382,6 +436,10 @@ nav{
 .recentActivityText p {
     margin: 0;
     text-align: left;
+}
+
+.recentActivityText p:nth-child(2) {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 //====================================//

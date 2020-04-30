@@ -45,3 +45,18 @@ send.addEventListener('click', () => {
 //====================================//
 //            Notifications           //
 //====================================//
+
+const bellDiv = document.querySelector(".bellDiv");
+
+bellDiv.addEventListener('click', () => {
+    const notificationDropdown = document.querySelector(".notificationDropdown");
+    function displayNotifications() {
+        if(notificationDropdown.style.display === 'none') {
+            notificationDropdown.style.display = 'block';
+        } else {
+            notificationDropdown.style.display = 'none';
+        }
+    }
+    displayNotifications();
+});
+
