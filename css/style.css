@@ -1067,7 +1067,7 @@ h1 {
   color: #fff;
   padding: 20px 30px;
   margin: 0 auto;
-  display: inline-block;
+  display: none;
 }
 
 .userDiv {
@@ -1162,6 +1162,12 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: 768px) {
+  h1 {
+    display: inline-block;
+  }
+}
+
 nav {
   background-color: #504873;
 }
@@ -1196,35 +1202,46 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: #D1D1D1 1px solid;
 }
 
 .headline {
+  display: none;
   background-color: #fff;
   padding: 22px;
-  border-right: #D1D1D1 1px solid;
   border-bottom: none;
   margin: 0;
 }
 
 .mainHeaderSearch {
-  display: flex;
-  justify-content: center;
-  width: 30%;
+  width: 100%;
+  border-bottom: #D1D1D1 1px solid;
+  border-left: #D1D1D1 1px solid;
+  border-bottom-left-radius: 10px;
 }
 
 .mainHeaderSearch input {
-  width: 100%;
-  padding: 2px;
+  float: right;
+  width: 50%;
+  padding: 6px;
   margin: 18px;
   border: #D1D1D1 2px solid;
   border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .mainHeaderSearch input {
+    width: 300px;
+  }
+  .headline {
+    display: block;
+  }
 }
 
 .alert {
   margin: 10px;
   background-color: #7A6FC1;
   border-radius: 3px;
+  border-top: none;
 }
 
 .alert p, .alertBannerClose {
@@ -1248,6 +1265,10 @@ nav {
   cursor: pointer;
 }
 
+.traffic {
+  border-top: none;
+}
+
 .trafficNav {
   float: right;
   margin-left: auto;
@@ -1256,7 +1277,6 @@ nav {
 
 .trafficNavLink, .activeNavLink {
   display: inline-block;
-  margin-left: 20px;
   color: #666666;
   padding: 10px;
   cursor: pointer;
@@ -1274,16 +1294,12 @@ nav {
 }
 
 @media (min-width: 768px) {
-  .widget-container-full {
-    width: 90vw;
+  .trafficNavLink, .activeNavLink {
+    margin-left: 20px;
   }
-  .widget-container-half {
-    width: 45vw;
+  .traffic {
+    border-top: none;
   }
-}
-
-.traffic {
-  border-top: none;
 }
 
 .socialStats {
@@ -1361,7 +1377,7 @@ nav {
 
 .NewMembersContainer {
   padding: 10px 0;
-  display: block;
+  display: flow-root;
 }
 
 .NewMembersContainer:not(:last-child) {
@@ -1498,16 +1514,25 @@ nav {
   justify-content: space-between;
 }
 
+.switch-material.switch-light {
+  margin: 1em 0;
+}
+
 .settings {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.settings p {
+  margin: 0;
+}
+
 .settings-button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 .checkDiv {

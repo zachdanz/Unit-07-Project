@@ -60,3 +60,38 @@ bellDiv.addEventListener('click', () => {
     displayNotifications();
 });
 
+//====================================//
+//            Local Storage           //
+//====================================//
+
+// Timezone Select
+
+let timezoneSelect = document.querySelector("#timezone-offset");
+let selectOption = timezoneSelect.options[timezoneSelect.selectedIndex];
+let lastSelected = localStorage.getItem('select');
+
+if(lastSelected) {
+    timezoneSelect.value = lastSelected; 
+}
+
+timezoneSelect.onchange = function () {
+   lastSelected = timezoneSelect.options[timezoneSelect.selectedIndex].value;
+   console.log(lastSelected);
+   localStorage.setItem('select', lastSelected);
+}
+
+// Toggle Settings
+
+let emailToggle = document.querySelector("#emailNotif");
+let publicToggle = document.querySelector("#publicProf");
+
+function save() {	
+    let emailToggle = document.querySelector("#emailNotif");
+    let publicToggle = document.querySelector("#publicProf");
+    localStorage.setItem("checkbox1", emailToggle.checked);	
+    localStorage.setItem("checkbox1", publicToggle.checked);	
+}
+
+//for loading
+var checked = JSON.parse(localStorage.getItem("checkbox1"));
+    document.getElementById("checkbox1").checked = checked;

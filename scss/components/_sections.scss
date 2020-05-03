@@ -6,6 +6,7 @@
     overflow: auto;
 }
 
+
 // main {
 //     max-width: $max-width;
 // }
@@ -46,7 +47,7 @@ h1 {
     color: $white;
     padding: 20px 30px;
     margin: 0 auto;
-    display: inline-block;
+    display: none;
 }
 
 .userDiv {
@@ -141,7 +142,13 @@ h1 {
     margin: 0;
     text-align: left;
     color: rgba(0, 0, 0, 0.5);
+}
 
+@media (min-width: $break-m) {
+
+    h1{
+        display: inline-block;
+    }
 }
 
 //====================================//
@@ -172,10 +179,6 @@ nav{
 }
 
 @media (min-width: $break-m) {
-    // nav{
-    //     padding: 20px;
-    // }
-
     .navicon{
         padding: 20px;
     }
@@ -190,29 +193,40 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: $color-border 1px solid;
 }
 
 .headline{
+    display: none;
     background-color: $white;
     padding: 22px;
-    border-right: $color-border 1px solid;
     border-bottom: none;
     margin: 0;
 }
 
 .mainHeaderSearch{
-    display: flex;
-    justify-content: center;
-    width: 30%;
+    width: 100%;
+    border-bottom: $color-border 1px solid;
+    border-left: $color-border 1px solid;
+    border-bottom-left-radius: 10px;
 }
 
 .mainHeaderSearch input{
-    width: 100%;
-    padding: 2px;
+    float: right;
+    width: 50%;
+    padding: 6px;
     margin: 18px;
     border: $color-border 2px solid;
     border-radius: 4px;
+}
+
+@media (min-width: $break-m) {
+    .mainHeaderSearch input{
+        width: 300px;
+    }
+
+    .headline{
+        display: block;
+    }
 }
 
 //====================================//
@@ -223,6 +237,7 @@ nav{
     margin: 10px;
     background-color: $color-primary;
     border-radius: 3px;
+    border-top: none;
 }
 
 .alert p, .alertBannerClose {
@@ -250,6 +265,10 @@ nav{
 //               Traffic              //
 //====================================//
 
+.traffic{
+    border-top: none;
+}
+
 .trafficNav{
     float: right;
     margin-left: auto;
@@ -258,7 +277,6 @@ nav{
 
 .trafficNavLink, .activeNavLink{
     display: inline-block;
-    margin-left: 20px;
     color: $color-h3;
     padding: 10px;
     cursor: pointer;
@@ -275,18 +293,14 @@ nav{
     width: 95vw;
 }
 
-@media (min-width: 768px) {
-    .widget-container-full {
-        width: 90vw;
-    }
-
-    .widget-container-half {
-        width: 45vw;
-    }
+@media (min-width: $break-m) {
+    .trafficNavLink, .activeNavLink{
+        margin-left: 20px;
 }
 
-.traffic{
-    border-top: none;
+    .traffic{
+        border-top: none;
+    }
 }
 
 //====================================//
@@ -383,7 +397,7 @@ nav{
 
 .NewMembersContainer{
     padding: 10px 0;
-    display: block;
+    display: flow-root;
 }
 
 .NewMembersContainer:not(:last-child) {
@@ -534,16 +548,25 @@ nav{
     justify-content: space-between;
 }
 
+.switch-material.switch-light {
+    margin: 1em 0;
+}
+
 .settings{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.settings p{
+    margin: 0;
+}
+
 .settings-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 1em;
 }
 
 .checkDiv{

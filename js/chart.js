@@ -83,7 +83,7 @@ const trafficData = [
 //     };
 
 let trafficOptions = {
-    aspectRatio: 3,
+    aspectRatio: 2.5,
     animation: {
         duration: 0
     },
