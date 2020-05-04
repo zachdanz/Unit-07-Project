@@ -1403,6 +1403,15 @@ nav {
   }
 }
 
+@media (max-width: 1200px) {
+  .socialImage {
+    display: none;
+  }
+  .socialContainer {
+    justify-content: center;
+  }
+}
+
 .NewMembersContainer {
   padding: 10px 0;
   display: flex;
