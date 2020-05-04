@@ -381,12 +381,11 @@ nav{
 }
 
 .socialIcon{
-
+    color: $color-primary;
 }
 
 .socialImage {
     height: 100%;
-    width: 50px;
     background-color: none;
 }
 
@@ -396,6 +395,7 @@ nav{
     left: 1.5em;
     top: 1.5em;
     color: $color-primary;
+
 }
 
 @media (min-width: $break-m) {

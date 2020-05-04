@@ -1365,9 +1365,12 @@ nav {
   display: block;
 }
 
+.socialIcon {
+  color: #7A6FC1;
+}
+
 .socialImage {
   height: 100%;
-  width: 50px;
   background-color: none;
 }
 
