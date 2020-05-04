@@ -89,9 +89,9 @@ function save() {
     let emailToggle = document.querySelector("#emailNotif");
     let publicToggle = document.querySelector("#publicProf");
     localStorage.setItem("checkbox1", emailToggle.checked);	
-    localStorage.setItem("checkbox1", publicToggle.checked);	
+    localStorage.setItem("checkbox2", publicToggle.checked);	
 }
 
 //for loading
-var checked = JSON.parse(localStorage.getItem("checkbox1"));
-    document.getElementById("checkbox1").checked = checked;
+emailToggle.checked = JSON.parse(localStorage.getItem("checkbox1"));
+publicToggle.checked = JSON.parse(localStorage.getItem("checkbox2"));
