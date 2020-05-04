@@ -7,9 +7,9 @@ const alertBanner = document.getElementById("alert");
 alertBanner.innerHTML =
 `
     <div class="alertBanner">
-    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
-    to complete</p>
-    <p class="alertBannerClose">Close</p>
+        <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
+        to complete</p>
+        <p class="alertBannerClose">Close</p>
     </div>
 `
 alertBanner.addEventListener('click', e => {
