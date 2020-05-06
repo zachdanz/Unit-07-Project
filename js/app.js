@@ -68,38 +68,50 @@ bellDiv.addEventListener('click', () => {
 
 let timezoneSelect = document.querySelector("#timezone-offset");
 let selectOption = timezoneSelect.options[timezoneSelect.selectedIndex];
-let lastSelected = localStorage.getItem('select');
+let lastSelected = localStorage.getItem('timezone');
 
 if(lastSelected) {
     timezoneSelect.value = lastSelected; 
 }
 
-timezoneSelect.onchange = function () {
-   lastSelected = timezoneSelect.options[timezoneSelect.selectedIndex].value;
-   console.log(lastSelected);
-   localStorage.setItem('select', lastSelected);
-}
-
 // Toggle Settings
 
-let emailToggle = document.querySelector("#emailNotif");
-let publicToggle = document.querySelector("#publicProf");
+const emailToggle = document.querySelector("#emailNotif");
+const publicToggle = document.querySelector("#publicProf");
 
 function save() {	
-    let emailToggle = document.querySelector("#emailNotif");
-    let publicToggle = document.querySelector("#publicProf");
-    localStorage.setItem("checkbox1", emailToggle.checked);	
-    localStorage.setItem("checkbox2", publicToggle.checked);
+    localStorage.setItem("isSubscribed", emailToggle.checked);	
+    localStorage.setItem("isPublic", publicToggle.checked);
+    lastSelected = timezoneSelect.options[timezoneSelect.selectedIndex].value;
+    localStorage.setItem('timezone', lastSelected);
     console.log(localStorage);
+    alert("Preferences Saved.");
 }
 
-let saveButton = document.querySelector("#save");
+function cancel() {
+    const isSubscribed = localStorage.getItem("isSubscribed") === 'true' ? true : false;
+    const isPublic = localStorage.getItem("isPublic") === 'true' ? true : false;
+    const timezone = localStorage.getItem("timezone");
+    console.log({isSubscribed, isPublic, timezone});
+    emailToggle.checked = isSubscribed;
+    publicToggle.checked = isPublic;
+    timezoneSelect.value = timezone;
+    alert("Settings not saved.");
+}
+
+// Buttons
+
+const saveButton = document.querySelector("#save");
+const cancelButton = document.querySelector("#cancel");
 
 saveButton.addEventListener('click', () => {
    save(); 
 });
 
+cancelButton.addEventListener("click", () => {
+    cancel();
+});
 
 //for loading
-emailToggle.checked = JSON.parse(localStorage.getItem("checkbox1"));
-publicToggle.checked = JSON.parse(localStorage.getItem("checkbox2"));
+emailToggle.checked = JSON.parse(localStorage.getItem("isSubscribed"));
+publicToggle.checked = JSON.parse(localStorage.getItem("isPublic"));

@@ -426,9 +426,6 @@ main {
   }
 }
 
-/* ============================================= */
-/*              Cool Thing 2                     */
-/* ============================================= */
 /*
 * CSS TOGGLE SWITCH
 *
@@ -1581,7 +1578,7 @@ nav {
 .button-disabled,
 .button-primary {
   cursor: pointer;
-  width: 45%;
+  width: 48%;
   font-size: 1.25em;
   text-transform: uppercase;
   border-radius: 4px;
