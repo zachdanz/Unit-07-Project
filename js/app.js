@@ -96,7 +96,7 @@ function cancel() {
     emailToggle.checked = isSubscribed;
     publicToggle.checked = isPublic;
     timezoneSelect.value = timezone;
-    alert("Settings not saved.");
+    alert("Settings reverted to previous save state.");
 }
 
 // Buttons
